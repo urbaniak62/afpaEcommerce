@@ -1,0 +1,34 @@
+/* --------------Oubli du mot de passe----------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fdff97;
+}
+.navbar{
+    background: #33759800;
+}
+
+#envins{
+     margin-top:30px; 
+}
+
+#titreins{
+    margin-top:60px;
+    color: #337598;
+}
+
+#FormOub{
+    height:100%;
+    width: 100%;
+    margin-top:10px;
+    left:50%;
+    border-style: solid;
+    border-color: #337598;
+    padding: 25px;
+    background-color:white;
+}
+
+#envoub{
+    margin-top:27px; 
+}

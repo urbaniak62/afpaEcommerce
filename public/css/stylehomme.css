@@ -1,0 +1,102 @@
+/* Style presentation articles page homme */
+h5, h6{
+	color: #337598;
+}
+
+ /* Les couleurs - carre */
+
+li.couleurrouge{
+	 width:20px;
+	 height:20px;
+ 	background:red;
+}
+
+li.couleurvert{
+	width:20px;
+	 height:20px;
+ 	background:green;
+}
+
+li.couleurjaune{
+	 width:20px;
+	 height:20px;
+ 	background:yellow;
+}
+
+li.couleurnoir{
+	width:20px;
+	 height:20px;
+ 	background:black;
+}
+
+li.couleurorange{
+	 width:20px;
+	 height:20px;
+ 	background:#FF5B2B;
+}
+
+li.couleurblanc{
+	width:20px;
+	 height:20px;
+ 	background:white;
+ 	border:1px solid;
+}
+
+li.couleurbleu{
+	 width:20px;
+	 height:20px;
+ 	background:blue;
+}
+
+li.couleurviolet{
+	width:20px;
+	 height:20px;
+ 	background:#853894;
+}
+
+/* button details article */
+button.btn_article{
+	background-color: #337598;
+	color:white;
+}
+
+
+.card{
+	border-color: #337598;
+	border-style:solid;
+	border-width: 3px;
+	transition: all 0.5s;
+}
+
+/* style div du titre "tailles" qd card active */
+.border_titre_tailles{
+	border-top-color: #C2C2C2;
+	border-top-style:solid;
+	border-width: 2px;
+	color: #337598;
+	margin-top: 10px;
+	display:none;
+	transition: visibility(0.3s);
+}
+
+/* style hover article */
+
+.action_card:hover .border_titre_tailles{
+	border-bottom-color: red;
+	display: block;
+	border-width: 5px;
+}
+
+.action_card:hover {
+	border-bottom-color: red;
+	border-width: 5px;
+}
+/* changement class container */
+.HommeBody{
+	min-width: 90% !important;
+}
+
+.btn-sm{
+	border-color: #337598 !important;
+	margin: 0 !important;
+}
