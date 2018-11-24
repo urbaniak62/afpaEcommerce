@@ -22,12 +22,12 @@ class InscriptionController extends Controller
             'numRue'=>['required','integer'],
             'nomRue'=>['required'],
             'ville'=>['required'],
-            'cp'=>['required','integer'],
-            'telPort'=>['nullable','integer'],
-            'telDom'=>['nullable','integer'],
+            'cp'=>['required',],
+            'telPort'=>['required',],
+            'telDom'=>['required',],
             'connu'=>['nullable'],
         ]);
-            $utilisateur =  \App\Utilisateurs::create([
+            $utilisateur = Utilisateurs::create([
                 'civilite'=>request('civilite'),
                 'nom'=>request('nom'),
                 'prenom'=>request('prenom'),

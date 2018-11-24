@@ -29,7 +29,7 @@
             <div class="col-xs-4 col-md-4">
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Prénom</label>
-                    <input type="text" class="form-control" id="prenom" name="prenom" value="<?php echo e(old('prenom')); ?>placeholder="Entrer votre prénom">
+                    <input type="text" class="form-control" id="prenom" name="prenom" value="<?php echo e(old('prenom')); ?>" placeholder="Entrer votre prénom">
                 </div>
                 <?php if($errors->has('prenom')): ?>
                 <div class="alert alert-danger" role="alert">
@@ -43,7 +43,7 @@
             <div class="col-xs-4 col-md-4">
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Email</label>
-                    <input type="text" class="form-control" id="email" name="email" value="<?php echo e(old('email')); ?> placeholder="Entrer votre email">
+                    <input type="text" class="form-control" id="email" name="email" value="<?php echo e(old('email')); ?>" placeholder="Entrer votre email">
                 </div>
                 <?php if($errors->has('email')): ?>
                 <div class="alert alert-danger" role="alert">
@@ -81,7 +81,7 @@
             <div class="col-xs-6 col-md-6">
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Numéro de rue</label>
-                    <input type="text" class="form-control" id="numrue" name="numRue" value="<?php echo e(old('numRue')); ?>placeholder="Numéro de votre rue">
+                    <input type="text" class="form-control" id="numrue" name="numRue" value="<?php echo e(old('numRue')); ?>" placeholder="Numéro de votre rue">
                 </div>
                 <?php if($errors->has('numRue')): ?>
                 <div class="alert alert-danger" role="alert">
@@ -93,7 +93,7 @@
             <div class="col-xs-6 col-md-6">
                 <div class="form-group">
                     <label for="formGroupExampleInput">Nom de rue</label>
-                    <input type="text" class="form-control" id="nomrue" name="nomRue" value="<?php echo e(old('nomRue')); ?>placeholder="Nom de votre rue">
+                    <input type="text" class="form-control" id="nomrue" name="nomRue" value="<?php echo e(old('nomRue')); ?>" placeholder="Nom de votre rue">
                 </div>
                 <?php if($errors->has('nomRue')): ?>
                 <div class="alert alert-danger" role="alert">
@@ -107,7 +107,7 @@
             <div class="col-xs-6 col-md-6">
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Code Postal</label>
-                    <input type="text" class="form-control" id="cp" name="cp" value="<?php echo e(old('cp')); ?> placeholder="Votre code postal">
+                    <input type="text" class="form-control" id="cp" name="cp" value="<?php echo e(old('cp')); ?>" placeholder="Votre code postal">
                 </div>
                 <?php if($errors->has('cp')): ?>
                 <div class="alert alert-danger" role="alert">
@@ -119,7 +119,7 @@
             <div class="col-xs-6 col-md-6">
                 <div class="form-group">
                     <label for="formGroupExampleInput">Ville</label>
-                    <input type="text" class="form-control" id="ville" name="ville" value="<?php echo e(old('ville')); ?> placeholder="Nom de votre ville">
+                    <input type="text" class="form-control" id="ville" name="ville" value="<?php echo e(old('ville')); ?>" placeholder="Nom de votre ville">
                 </div>
                 <?php if($errors->has('ville')): ?>
                 <div class="alert alert-danger" role="alert">
