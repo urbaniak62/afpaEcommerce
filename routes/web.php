@@ -11,11 +11,14 @@
 |
 */
 
-Route::view('/', 'index');
+Route::get('/', 'ConnectionController@index');
+route::post('/','ConnectionController@connect');
 
 Route::get('/inscription','InscriptionController@formulaire');
 Route::post('/inscription','InscriptionController@traitement');
 
 Route::get('/admin','AdminController@liste');
 
-
+route::get('/homme',function(){
+    return view('homme');
+});

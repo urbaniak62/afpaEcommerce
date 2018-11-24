@@ -46,31 +46,41 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form method="post" action="/">
+                        <?php echo csrf_field(); ?>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
                                 placeholder="Entrer votre email">
                             <small id="emailHelp" class="form-text text-muted"><i>Cet email est l'identifiant pour
                                     accéder à votre compte</i></small>
                         </div>
+                        <?php if($errors->has('email')): ?>
+                        <div class="alert alert-danger" role="alert">
+                              <?php echo e($errors->first('email')); ?>
+
+                        </div>
+                        <?php endif; ?>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Mot de passe</label>
-                            <input type="password" class="form-control" id="mdp" placeholder="Entrer votre mot de passe">
-                            <a href="#"><small id="pertemdp" class="form-text text-muted"><i>Mot de passe oublié ?</i></small></a>
+                            <input type="password" class="form-control" id="mdp" name="password" placeholder="Entrer votre mot de passe">
+                            
                         </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="souv">
-                            <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+                        <?php if($errors->has('password')): ?>
+                        <div class="alert alert-danger" role="alert">
+                              <?php echo e($errors->first('password')); ?>
 
+                        </div>
+                        <?php endif; ?>
+                        
+                        <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" onclick="ouvins()">Première connexion ?</button>
+                                
+                                <button type="submit" class="btn btn-primary" id="modal">Se connecter</button>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary" onclick="ouvins()">Première connexion ?</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                    <button type="button" class="btn btn-primary" id="modal">Envoyer</button>
-                </div>
+
             </div>
         </div>
     </div>
@@ -91,7 +101,7 @@
     console.log("eeeee");
 $(document).ready(function(){
     $("#modal").click(function(){
-        alert("Email : " + $("#email").val() + " Mot de passe : " + $("#mdp").val() + " Se souvenir : " + $("#souv").prop("checked"));
+        // alert("Email : " + $("#email").val() + " Mot de passe : " + $("#mdp").val() + " Se souvenir : " + $("#souv").prop("checked"));
     });
 
     });

@@ -1,9 +1,9 @@
 @extends('layout.layout')
 
 @section('content')
- <!-- -------------------CARROUSSEL-------------------------------------- -->
+<!-- -------------------CARROUSSEL-------------------------------------- -->
 
- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -44,7 +44,7 @@
             </div>
             <div class="col-md-3 col-sm-3 p-0">
                 <div class="categorie">
-                    <a href="{{url('views.homme.php')}}">HOMMES</a>
+                    <a href="{!!url('/homme');!!}">HOMMES</a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3 p-0">
@@ -58,24 +58,31 @@
                 </div>
             </div>
             <div class="banier">
-                <img src="asset/img/solde.jpg" alt="">
+                <img src="{{asset('img/solde.jpg')}}" alt="">
             </div>
 
         </div>
 
         <div class="row">
             <div class="col-md-6 col-sm12 p-0 mt-1" class="col-vitrine" style="background:white;">
-                 <img class="card-img-top mt-3 pr-2 pl-2" src="asset/img/images.jpg" alt="Card image cap">  .
+                <img class="card-img-top mt-3 pr-2 pl-2" src="{{asset('img/images.jpg')}}" alt="Card image cap"> .
                 <!-- <img src="asset/img/images.jpg" class="vitrine"alt=""> -->
             </div>
             <div class="col-md-3 col-sm-6 mt-1 ml-1" style="background:white;">
-                    <img class="card-img-top mt-3" src="asset/img/casquette.png" alt="Card image cap">
-                    <div class="price">
-                        <span><h3>100€</h3></span>
-                    </div>
+                <img class="card-img-top mt-3" src="{{asset('img/casquette.png')}}" alt="Card image cap">
+                <div class="price">
+                    <span>
+                        <h3>100€</h3>
+                    </span>
+                </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-
+            <div class="col-md-3 col-sm-6 mt-1 ml-1" style="background:white;">
+                <img class="card-img-top mt-3" src="{{asset('img/casquette.png')}}" alt="Card image cap">
+                <div class="price">
+                    <span>
+                        <h3>100€</h3>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
