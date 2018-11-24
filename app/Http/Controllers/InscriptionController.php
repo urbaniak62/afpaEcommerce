@@ -12,20 +12,21 @@ class InscriptionController extends Controller
         return view('inscription');
     }
     public function  traitement(){
-        // request()->validate([
-        //     'civilite'=>['require'],
-        //     'nom'=>['require'],
-        //     'prenom'=>['require'],
-        //     'email'=>['require','email'],
-        //     'password'=>['require','confirmed','min:6'],
-        //     'numRue'=>['require'],
-        //     'nomRue'=>['require'],
-        //     'ville'=>['require'],
-        //     'cp'=>['require'],
-        //     'telPort'=>['nullable'],
-        //     'telDom'=>['nullable',],
-        //     'connu'=>['nullable'],
-        // ]);
+        request()->validate([
+            'civilite'=>['required'],
+            'nom'=>['required'],
+            'prenom'=>['required'],
+            'email'=>['required','email'],
+            'password'=>['required','confirmed','min:6'],
+            'password_confirmation'=>['required'],
+            'numRue'=>['required','integer'],
+            'nomRue'=>['required'],
+            'ville'=>['required'],
+            'cp'=>['required','integer'],
+            'telPort'=>['nullable','integer'],
+            'telDom'=>['nullable','integer'],
+            'connu'=>['nullable'],
+        ]);
             $utilisateur =  \App\Utilisateurs::create([
                 'civilite'=>request('civilite'),
                 'nom'=>request('nom'),

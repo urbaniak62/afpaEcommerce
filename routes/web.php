@@ -15,3 +15,11 @@ Route::view('/', 'index');
 
 Route::get('/inscription','InscriptionController@formulaire');
 Route::post('/inscription','InscriptionController@traitement');
+
+Route::get('/admin',function(){
+    $utilisateurs= App\Utilisateurs::all();
+    return view('admin',[
+        'utilisateurs'=>$utilisateurs,
+    ]);
+    dd($utilisateurs);
+});
