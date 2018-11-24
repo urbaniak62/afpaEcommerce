@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::view('/', 'index');
+
+Route::get('/inscription','InscriptionController@formulaire');
+Route::post('/inscription','InscriptionController@traitement');
