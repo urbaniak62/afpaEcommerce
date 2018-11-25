@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Validator;
+
 
 class ConnectionController extends Controller
 {
@@ -16,14 +18,22 @@ class ConnectionController extends Controller
             'password'=>['required','min:6'],
 
             ]);
-       $auth= auth()->attempt([
-            'email'=>request('email'),
-            'password'=>request('password'),
-        ]);
-            if($auth){
-                return redirect('/homme');
-            }
+    //    $auth= auth()->attempt([
+    //         'email'=>request('email'),
+    //         'password'=>request('password'),
+    //     ]);
+    //         if($auth){
+    //             return redirect('/homme');
+    //         }
 
-            dump($auth);
+    //         dump($auth);
+    $connection = auth()->attempt(request([
+        'name','password'
+    ]));
+    if($connection){
+        return redirect('/homme');
     }
+    dd($connection);
+     }
+   
 }
