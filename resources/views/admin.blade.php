@@ -39,5 +39,6 @@
             @endforeach
         </tbody>
     </table>
+    <a href="{{ url('ajouter') }}"><button class="btn btn-success m-5" type="button">Ajouter un article</button></a>
 
 @endsection

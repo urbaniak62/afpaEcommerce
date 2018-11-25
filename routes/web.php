@@ -22,3 +22,5 @@ Route::get('/admin','AdminController@liste');
 route::get('/homme',function(){
     return view('homme');
 });
+
+route::get('ajouter','ProductController@index');

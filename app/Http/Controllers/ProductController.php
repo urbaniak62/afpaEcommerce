@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function index(){
+        return view('ajouter');
+    }
+
     public function addProduct(){
         request()->validate([
             'titre'=>['require'],
@@ -17,6 +21,7 @@ class ProductController extends Controller
             'taille'=>['require'],
             'couleur'=>['require'],
         ]);
+        
         $product = Products::create([
             'titre'=>request('titre'),
             'prix'=>request('prix'),
