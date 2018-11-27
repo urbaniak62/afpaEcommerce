@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Validator;
+
 
 
 class ConnectionController extends Controller
@@ -27,9 +27,14 @@ class ConnectionController extends Controller
     //         }
 
     //         dump($auth);
-    $connection = auth()->attempt(request([
+    /*
+    request([
         'name','password'
-    ]));
+    ]) 
+    */
+
+    echo bcrypt( 'chniak24dec78'); 
+    $connection = auth()->attempt( ['email' => 'urbaniak.n78@gmail.com', "password" => '$2y$10$RCPdh3osGqL1xOKp5nasge4AUdCrJAqBcwbG8OZPOnlS6ctaHZu4u' ] );
     if($connection){
         return redirect('/homme');
     }

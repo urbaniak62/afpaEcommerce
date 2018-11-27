@@ -24,3 +24,5 @@ route::get('/homme',function(){
 });
 
 route::get('ajouter','ProductController@index');
+route::post('ajouter','ProductController@addProduct');
+route::get('homme','ProductController@store');
