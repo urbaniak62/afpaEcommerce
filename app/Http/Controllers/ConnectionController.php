@@ -27,14 +27,12 @@ class ConnectionController extends Controller
     //         }
 
     //         dump($auth);
-    /*
-    request([
-        'name','password'
-    ]) 
-    */
+    
+    echo (request('password'));
 
-    echo bcrypt( 'chniak24dec78'); 
-    $connection = auth()->attempt( ['email' => 'urbaniak.n78@gmail.com', "password" => '$2y$10$RCPdh3osGqL1xOKp5nasge4AUdCrJAqBcwbG8OZPOnlS6ctaHZu4u' ] );
+    
+    $connection = auth()->attempt( ['email' => request('email'),
+                                    'password' =>bcrypt( request('password')) ] );
     if($connection){
         return redirect('/homme');
     }

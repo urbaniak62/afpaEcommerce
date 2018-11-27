@@ -23,7 +23,7 @@ class ProductController extends Controller
             'couleur'=>['required'],
         ]);
         
-        $product = Products::create([
+        $products = Products::create([
             'titre'=>request('titre'),
             'prix'=>request('prix'),
             'nomProduit'=>request('nomProduit'),
@@ -40,6 +40,6 @@ class ProductController extends Controller
     return view('homme',[
         'products'=>$products,
     ]);
-    dd($products);
+    
     }
 }

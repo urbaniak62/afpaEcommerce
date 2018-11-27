@@ -108,14 +108,15 @@
                     </div>
                 </div>
                 <!-- Card Short -->
+                @foreach ($products as $product )
                 <div class="card  action_card col-md-2 col-sm-2 mr-1">
                     <img class="card-img-top mt-3" src="{{asset('img/short.png')}}" alt="Short Long Surf">
                     <div class="card-body">
-                        <h5 class="card-title font-weight-bold text-center">SHORT LONG SURF</h5>
-                        <p class="card-text"><small>Le nouveau Short Long Surf AfpaFouille est ce qui se fait de mieux en termes de confort.</small></p>
-                        <p class="card-text font-weight-bold">45,00€</p>
+                        <h5 class="card-title font-weight-bold text-center">{{ $product->nomProduit }}</h5>
+                        <p class="card-text"><small>{{ $product->descriptionProduit }}</small></p>
+                        <p class="card-text font-weight-bold">{{ $product->prix }} €</p>
                         <a href="#"><button type="button" class="btn_article">Détails</button></a>
-                        <div class=" text-center border_titre_tailles">Tailles
+                        <div class=" text-center border_titre_tailles">taille
                             <div class="row">
                             <ul class="list-unstyled list-inline border_tailles">
                                 <li class="list-inline-item "><button type="button" class="btn-sm">38</button></li>
@@ -127,8 +128,10 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
+                
                 <!-- Card Tee Shirt -->
-                <div class="card action_card col-md-2 col-sm-2 mr-1" >
+                {{-- <div class="card action_card col-md-2 col-sm-2 mr-1" >
                 <img class="card-img-top mt-3" src="{{asset('img/tee-shirt.png')}}" alt="tee-shirt Hossegor">
                     <div class="card-body">
                     <h5 class="card-title font-weight-bold text-center">TEE SHIRT HOSSEGOR</h5>
@@ -189,6 +192,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 @endsection
